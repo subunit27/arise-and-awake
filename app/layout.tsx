@@ -53,6 +53,11 @@ export const metadata: Metadata = {
       "One light can light a million lights. Essays on the intersection of ancient wisdom and modern ambition.",
   },
   robots: { index: true, follow: true },
+  alternates: {
+    types: {
+      "application/rss+xml": "https://ariseandawake.com/rss.xml",
+    },
+  },
 };
 
 export default function RootLayout({
