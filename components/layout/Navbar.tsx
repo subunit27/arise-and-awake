@@ -53,6 +53,7 @@ export default function Navbar() {
         >
           {[
             { label: "Essays", href: "/blog" },
+            { label: "Blueprint", href: "/blueprint" },
             { label: "About", href: "/about" },
             { label: "10-Day Course", href: "/course" },
           ].map(({ label, href }) => (
@@ -153,6 +154,13 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
           >
             Essays
+          </Link>
+          <Link
+            href="/blueprint"
+            style={{ textDecoration: "none", fontSize: "1rem", fontWeight: 500, color: "#3D352C" }}
+            onClick={() => setOpen(false)}
+          >
+            Blueprint
           </Link>
           <Link
             href="/about"
