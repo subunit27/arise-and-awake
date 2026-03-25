@@ -18,6 +18,19 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      publishedTime: new Date(post.publishedAt).toISOString(),
+      authors: ["Shubh Singh"],
+      tags: [post.category, "Swami Vivekananda", "philosophy", "arise awake"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+    },
   };
 }
 
@@ -35,8 +48,33 @@ export default async function PostPage({
   const nextPost = allPosts[currentIndex + 1] ?? null;
   const prevPost = allPosts[currentIndex - 1] ?? null;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: new Date(post.publishedAt).toISOString(),
+    dateModified: new Date(post.publishedAt).toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Shubh Singh",
+      url: "https://ariseandawake.com/about",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Arise & Awake",
+      url: "https://ariseandawake.com",
+    },
+    url: `https://ariseandawake.com/blog/${post.slug}`,
+    keywords: [post.category, "Swami Vivekananda", "philosophy", "arise awake"].join(", "),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
       <section
         style={{

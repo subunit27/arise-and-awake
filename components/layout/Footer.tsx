@@ -52,6 +52,9 @@ export default function Footer() {
         <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap", justifyContent: "center" }}>
           {[
             { label: "Essays", href: "/blog" },
+            { label: "Blueprint", href: "/blueprint" },
+            { label: "Newsletter", href: "/newsletter" },
+            { label: "Free Course", href: "/course" },
             { label: "About", href: "/about" },
           ].map(({ label, href }) => (
             <Link
