@@ -48,6 +48,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@AriseAwake1111",
+    creator: "@AriseAwake1111",
     title: "Arise & Awake — Philosophy for the Modern Pioneer",
     description:
       "One light can light a million lights. Essays on the intersection of ancient wisdom and modern ambition.",
