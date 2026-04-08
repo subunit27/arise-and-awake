@@ -52,8 +52,7 @@ export default function Footer() {
         <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap", justifyContent: "center" }}>
           {[
             { label: "Essays", href: "/blog" },
-            { label: "Blueprint", href: "/blueprint" },
-            { label: "Newsletter", href: "/newsletter" },
+            { label: "Tools", href: "/tools" },
             { label: "Free Course", href: "/course" },
             { label: "About", href: "/about" },
           ].map(({ label, href }) => (
@@ -72,6 +71,27 @@ export default function Footer() {
               {label}
             </Link>
           ))}
+          <a
+            href="https://x.com/AriseAwake1111"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              textDecoration: "none",
+              fontSize: "0.9rem",
+              color: "#A89F94",
+              transition: "color 0.15s",
+              display: "flex",
+              alignItems: "center",
+              gap: "0.35rem",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#FDFAF5")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#A89F94")}
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.258 5.63 5.906-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+            Follow
+          </a>
         </div>
 
         <div
