@@ -438,7 +438,6 @@ export default function SankalpBuilder() {
                   fontStyle: "italic",
                   color: "#FDFAF5",
                   lineHeight: 1.75,
-                  placeholder: "opacity: 0.3",
                 }}
               />
             )}

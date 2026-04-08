@@ -614,7 +614,7 @@ export default function DhyanaTimer() {
               maxWidth: "440px",
             }}
           >
-            <p style={{ fontSize: "0.875rem", color: "rgba(253,250,245,0.35)", marginBottom: "0.35rem", letterSpacing: "0.08em", textTransform: "uppercase", fontSize: "0.65rem", fontWeight: 700 }}>
+            <p style={{ fontSize: "0.65rem", color: "rgba(253,250,245,0.35)", marginBottom: "0.35rem", letterSpacing: "0.08em", textTransform: "uppercase", fontWeight: 700 }}>
               Your intention
             </p>
             <p
